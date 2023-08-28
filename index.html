@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Hunting</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+  <header class="bg-[#0D6EFD0D]">
+    <!-- <h1 class="text-6xl">Welcome to my Phone Hunter!</h1> -->
+    <div class="flex justify-around ">
+      <div class="text-[25px] mt-9 font-bold">Hot Gadgets</div>
+      <button class="btn-accent mt-9 w-[107px] bg-[#0D6EFD] text-white">Sign Up</button>
+    </div>
+    <div class="text-center mt-4">
+      <h2 class="text-[65px] font-bold">Apple Iphone 13 Pro Max</h2>
+      <p class="text-[18px] font-medium">There are many variations of passages of Lorem Ipsum available,<br> but the
+        majority have suffered alteration in some form,<br>
+        by injected humou.</p>
+    </div>
+    <div class="flex flex-col lg:flex-row justify-center">
+      <img src="pngwing 2.png" alt="">
+      <img src="pngwing 1.png" alt="">
+      <img  src="pngwing 2.png" alt="">
+    </div>
+  </header>
+  <main class="container mx-auto mt-8">
+    <section class="container mx-auto mt-10 p-4">
+      <h2 class="text-2xl text-center  font-semibold text-gray-800">Search your phone</h2>
+      <div class="px-6 py-4  md:w-3/4 mx-auto">
+        <div class="mt-4 flex">
+          <input id="search-Field" type="text" placeholder="Search..."
+            class="w-full bg-[#100F0F0A] px-4 py-2 border rounded-l-md focus:outline-none focus:ring focus:border-blue-500">
+          <button onclick="handlerSearch()"
+            class="bg-blue-500 text-white py-2 px-4 rounded-r-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+            id="searchButton">
+            Search
+          </button>
+        </div>
+      </div>
+
+    </section>
+    <!-- search result -->
+    <section>
+      <!-- spiner -->
+      <div id="loadingSpiner" class="flex justify-center hidden">
+        <span class="loading loading-spinner loading-lg "></span>
+      </div>
+      <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5  p-16">
+      </div>
+      <!-- show all button -->
+      <div id="show-all-container" class="hidden flex justify-center my-8">
+        <button onclick="handelShowall()" class="btn btn-accent">Show all</button>
+      </div>
+    </section>
+
+    <!-- show details modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="my_modal_1" class="modal">
+      <form method="dialog" class="modal-box">
+        <h3 id="show-detail-phone-name" class="font-bold text-lg"></h3>
+        <div id="show-detail-container">
+
+        </div>
+        <div class="flex justify-center ">
+          <button class="btn bg-red-700">Close</button>
+        </div>
+        <div>
+          <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        </div>
+      </form>
+    </dialog>
+  </main>
+  <footer class="p-[5.5rem] bg-[#0D6EFD0D] text-neutral-content">
+
+      <!-- Additional content -->
+      <div class="flex flex-col md:flex-row justify-between mt-8 mb-[63px]">
+        <div>
+          <h2 class="text-3xl text-black font-bold">Hot Gadgets</h2>
+          <p class="text-[18px] text-black font-semibold">You can definitely work.</p>
+        </div>
+        <div class="md:pl-[48%]">
+          <button class="btn-accent h-[47px] mt-3 w-32 bg-[#0D6EFD] text-white">Join Premium</button>
+        </div>
+      </div>
+        <p class=" border-b-2 mb-[34px] "></p>
+        <!-- <hr class="mt-4"> -->
+    <div class="grid grid-cols-1 md:grid-cols-2 text-black lg:grid-cols-4 gap-8">
+      <!-- Column 1 -->
+      <div>
+        <h2 class="text-3xl font-bold">Product</h2>
+        <ul>
+          <li>Remote jobs</li>
+          <li>Startup jobs</li>
+          <li>Company jobs</li>
+        </ul>
+      </div>
+  
+      <!-- Column 2 -->
+      <div>
+        <h2 class="text-3xl font-bold">Browse jobs</h2>
+        <ul>
+          <li>Remote jobs</li>
+          <li>Startup jobs</li>
+          <li>Company jobs</li>
+        </ul>
+      </div>
+  
+      <!-- Column 3 -->
+      <div>
+        <h2 class="text-3xl font-bold">Popular</h2>
+        <ul>
+          <li>UI/UX Design</li>
+          <li>Product Design</li>
+          <li>Back-End Developer</li>
+          <li>Front-End Developer</li>
+        </ul>
+      </div>
+  
+      <!-- Column 4 -->
+      <div>
+        <h2 class="text-3xl font-bold">Resource</h2>
+        <ul>
+          <li>Faq</li>
+          <li>Support</li>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+        </ul>
+      </div>
+    </div>
+  
+  
+  </footer>
+
+  <script src="js/phone.js"></script>
+</body>
+
+</html>
